@@ -19,32 +19,46 @@ else if (computerChoice === 3) {
 }
 }
 
-function getPlayerSelection(x) {
-    var x = window.prompt("Choose Rock, Paper or Scissors?").toLowerCase();
-    return (x);
-}
+let compScore = 0
+let playerScore = 0
 
 function playRound(playerSelection, computerSelection) {
     if (computerSelection === "rock" && playerSelection === "rock") {
-        alert("draw!"); }
+        alert("draw!") }
     else if (computerSelection === "scissor" && playerSelection === "scissor") {
-        alert("draw!"); }
+        alert("draw!") }
     else if (computerSelection === "paper" && playerSelection === "paper") {
-        alert("draw!"); } 
+        alert("draw!") } 
     else if (computerSelection === "rock" && playerSelection === "paper") {
-        alert("You Win!"); }     
+        playerScore++
+        alert("You Win!") }   
     else if (computerSelection === "scissors" && playerSelection === "rock") {
-        alert("You Win!"); }     
+        playerScore++    
+        alert("You Win!") }  
     else if (computerSelection === "paper" && playerSelection === "scissors") {
-        alert("You Win!"); }
+        playerScore++
+        alert("You Win!") }
         else if (computerSelection === "paper" && playerSelection === "Rock") {
-        alert("You Lose!"); }
+        compScore++
+        alert("You Lose!") }
     else if (computerSelection === "rock" && playerSelection === "scissors") {
-        alert("You Lose!"); }
+        compScore++
+        alert("You Lose!") }
     else if (computerSelection === "scissors" && playerSelection === "paper") {
-        alert("You Lose!"); }
+        compScore++
+        alert("You Lose!") }
     }
 
-const playerSelection = getPlayerSelection();
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+    for (let i = 0; i < 5; i++) {
+    const playerSelection = prompt("Choose Rock, Paper or Scissors?").toLowerCase()
+    const computerSelection = getComputerChoice()
+    playRound(playerSelection, computerSelection)
+    }
+    if (playerScore > compScore) {
+        alert ("You beat the computer!"); }
+    else if (playerScore < compScore) {
+        alert ("You lost to the computer!"); }
+}
+
+game()

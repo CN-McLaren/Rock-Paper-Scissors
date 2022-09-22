@@ -4,14 +4,42 @@ function getRandomNumber(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-let getComputerChoice = (getRandomNumber(1, 3));
+let computerChoice = (getRandomNumber(1, 3));
 
-if(getComputerChoice === 1) {
-    alert("Rock");
+function getComputerChoice() {
+
+if(computerChoice === 1) {
+    return("Rock");
 }
-else if(getComputerChoice === 2) {
-    alert("Paper");
+else if(computerChoice === 2) {
+    return("Paper");
 }
-else if (getComputerChoice === 3) {
-    alert("Scissors")
+else if (computerChoice === 3) {
+    return("Scissors");
 }
+}
+
+function playRound(playerSelection, computerSelection) {
+    if (computerSelection === "Rock" && playerSelection === "Rock") {
+        alert("draw!"); }
+    else if (computerSelection === "Scissor" && playerSelection === "Scissor") {
+        alert("draw!"); }
+    else if (computerSelection === "Paper" && playerSelection === "Paper") {
+        alert("draw!"); } 
+    else if (computerSelection === "Rock" && playerSelection === "Paper") {
+        alert("You Win!"); }     
+    else if (computerSelection === "Scissors" && playerSelection === "Rock") {
+        alert("You Win!"); }     
+    else if (computerSelection === "Paper" && playerSelection === "Scissors") {
+        alert("You Win!"); }
+        else if (computerSelection === "Paper" && playerSelection === "Rock") {
+        alert("You Lose!"); }
+    else if (computerSelection === "Rock" && playerSelection === "Scissors") {
+        alert("You Lose!"); }
+    else if (computerSelection === "Scissors" && playerSelection === "Paper") {
+        alert("You Lose!"); }
+    }
+
+const playerSelection = "Rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));

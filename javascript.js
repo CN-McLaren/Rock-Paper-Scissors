@@ -19,6 +19,11 @@ else if (computerChoice === 3) {
 }
 }
 
+function getPlayerSelection(x) {
+    var x = window.prompt("Choose Rock, Paper or Scissors?");
+    return (x);
+}
+
 function playRound(playerSelection, computerSelection) {
     if (computerSelection === "Rock" && playerSelection === "Rock") {
         alert("draw!"); }
@@ -40,6 +45,6 @@ function playRound(playerSelection, computerSelection) {
         alert("You Lose!"); }
     }
 
-const playerSelection = "Rock";
+const playerSelection = getPlayerSelection();
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));

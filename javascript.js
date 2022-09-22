@@ -31,22 +31,22 @@ function playRound(playerSelection, computerSelection) {
         alert("draw!") } 
     else if (computerSelection === "rock" && playerSelection === "paper") {
         playerScore++
-        alert("You Win!") }   
+        alert("You Win! their rock was no match for your paper!") }   
     else if (computerSelection === "scissors" && playerSelection === "rock") {
         playerScore++    
-        alert("You Win!") }  
+        alert("You Win! rock crushes scissors everytime!") }  
     else if (computerSelection === "paper" && playerSelection === "scissors") {
         playerScore++
-        alert("You Win!") }
+        alert("You Win! their flimsly paper is no match for the mighty scissors!") }
         else if (computerSelection === "paper" && playerSelection === "Rock") {
         compScore++
-        alert("You Lose!") }
+        alert("You Lose! lose by suffocation!") }
     else if (computerSelection === "rock" && playerSelection === "scissors") {
         compScore++
-        alert("You Lose!") }
+        alert("You Lose! crushed by the boulder of sysiphus") }
     else if (computerSelection === "scissors" && playerSelection === "paper") {
         compScore++
-        alert("You Lose!") }
+        alert("You Lose! what did you expect? you used paper...") }
     }
 
 function game() {

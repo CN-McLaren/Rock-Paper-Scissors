@@ -9,39 +9,39 @@ let computerChoice = (getRandomNumber(1, 3));
 function getComputerChoice() {
 
 if(computerChoice === 1) {
-    return("Rock");
+    return("rock");
 }
 else if(computerChoice === 2) {
-    return("Paper");
+    return("paper");
 }
 else if (computerChoice === 3) {
-    return("Scissors");
+    return("scissors");
 }
 }
 
 function getPlayerSelection(x) {
-    var x = window.prompt("Choose Rock, Paper or Scissors?");
+    var x = window.prompt("Choose Rock, Paper or Scissors?").toLowerCase();
     return (x);
 }
 
 function playRound(playerSelection, computerSelection) {
-    if (computerSelection === "Rock" && playerSelection === "Rock") {
+    if (computerSelection === "rock" && playerSelection === "rock") {
         alert("draw!"); }
-    else if (computerSelection === "Scissor" && playerSelection === "Scissor") {
+    else if (computerSelection === "scissor" && playerSelection === "scissor") {
         alert("draw!"); }
-    else if (computerSelection === "Paper" && playerSelection === "Paper") {
+    else if (computerSelection === "paper" && playerSelection === "paper") {
         alert("draw!"); } 
-    else if (computerSelection === "Rock" && playerSelection === "Paper") {
+    else if (computerSelection === "rock" && playerSelection === "paper") {
         alert("You Win!"); }     
-    else if (computerSelection === "Scissors" && playerSelection === "Rock") {
+    else if (computerSelection === "scissors" && playerSelection === "rock") {
         alert("You Win!"); }     
-    else if (computerSelection === "Paper" && playerSelection === "Scissors") {
+    else if (computerSelection === "paper" && playerSelection === "scissors") {
         alert("You Win!"); }
-        else if (computerSelection === "Paper" && playerSelection === "Rock") {
+        else if (computerSelection === "paper" && playerSelection === "Rock") {
         alert("You Lose!"); }
-    else if (computerSelection === "Rock" && playerSelection === "Scissors") {
+    else if (computerSelection === "rock" && playerSelection === "scissors") {
         alert("You Lose!"); }
-    else if (computerSelection === "Scissors" && playerSelection === "Paper") {
+    else if (computerSelection === "scissors" && playerSelection === "paper") {
         alert("You Lose!"); }
     }
 

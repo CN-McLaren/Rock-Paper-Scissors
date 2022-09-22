@@ -4,5 +4,14 @@ function getRandomNumber(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+let getComputerChoice = (getRandomNumber(1, 3));
 
-console.log(getRandomNumber(1, 3));
+if(getComputerChoice === 1) {
+    alert("Rock");
+}
+else if(getComputerChoice === 2) {
+    alert("Paper");
+}
+else if (getComputerChoice === 3) {
+    alert("Scissors")
+}

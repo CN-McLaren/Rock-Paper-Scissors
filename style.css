@@ -8,6 +8,7 @@ body {
 .header {
     display:flex;
     justify-content: center;
+    background-color: aqua;
 }
 
 .container {
@@ -17,16 +18,19 @@ body {
 
 .player {
     margin-left:300px;
+    background-color: gold;
 }
 
 .computer {
     margin-right:300px;
+    background-color: gold;
 }
 
 .middleContent {
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color:grey;
 }
 
 .playerText {

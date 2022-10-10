@@ -19,18 +19,28 @@ body {
 .player {
     margin-left:300px;
     background-color: gold;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
 }
 
-.computer {
+.computer { 
     margin-right:300px;
     background-color: gold;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .middleContent {
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     background-color:grey;
+    padding:100px;
+
 }
 
 .playerText {

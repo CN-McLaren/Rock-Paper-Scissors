@@ -60,3 +60,4 @@ function game() {
     else if (playerScore < compScore) {
         alert ("You lost to the computer!"); }
 }
+

@@ -1,3 +1,5 @@
+/* Colour palette 242331, 533E2D, A27035, B88B4A, DDCA7D */
+
 body {
     display: flex;
     flex-direction: column;
@@ -5,19 +7,37 @@ body {
     margin:0px;
     padding:0px;
 }
+
+h1 {
+    color: #DDCA7D;
+}
+
+h2 {
+    color: #DDCA7D;
+}
 .header {
     display:flex;
     justify-content: center;
-    background-color: aqua;
+    background-color: #242331;
 }
 
+.footer {
+    display:flex;
+    justify-content: center;
+    background-color: #242331;
+}
 .container {
     display:flex;
     justify-content: space-around;
+    background-color: #A27035;
+}
+
+.scoreContainer {
+    padding:230px;
+    background-color: #A27035;
 }
 
 .player {
-    background-color: gold;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
@@ -25,7 +45,6 @@ body {
 }
 
 .computer { 
-    background-color: gold;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
@@ -34,19 +53,24 @@ body {
 .middleContent {
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    background-color:grey;
     padding:100px;
+}
 
+.middleText {
+    margin-bottom: 50px;
+    color: #DDCA7D;
 }
 
 .playerText {
     display: flex;
     justify-content: center;
+    color: #DDCA7D;
 }
 
 .compText {
     display: flex;
     justify-content: center;
+    color: #DDCA7D;
 }

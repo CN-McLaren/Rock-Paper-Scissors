@@ -13,11 +13,10 @@ body {
 
 .container {
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .player {
-    margin-left:300px;
     background-color: gold;
     display:flex;
     flex-direction: column;
@@ -26,7 +25,6 @@ body {
 }
 
 .computer { 
-    margin-right:300px;
     background-color: gold;
     display:flex;
     flex-direction: column;
@@ -45,10 +43,10 @@ body {
 
 .playerText {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .compText {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }

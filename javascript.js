@@ -9,15 +9,13 @@ let computerChoice = (getRandomNumber(1, 3));
 function getComputerChoice() {
 
 if(computerChoice === 1) {
-    return("rock");
-}
+    return("rock"); }
 else if(computerChoice === 2) {
-    return("paper");
-}
+    return("paper"); }
 else if (computerChoice === 3) {
-    return("scissors");
+    return("scissors"); }
 }
-}
+
 
 let compScore = 0
 let playerScore = 0
@@ -48,6 +46,24 @@ function playRound(playerSelection, computerSelection) {
         compScore++
         alert("You Lose! what did you expect? you used paper...") }
     }
+
+const playerScissors = document.querySelector('.container').querySelector('.player').querySelector('.playerChoices').querySelector('.playerScissors');
+const playerPaper = document.querySelector('.container').querySelector('.player').querySelector('.playerChoices').querySelector('.playerPaper');
+const playerRock = document.querySelector('.container').querySelector('.player').querySelector('.playerChoices').querySelector('.playerRock');
+
+playerScissors.addEventListener('click', () => {
+    alert("scissors");
+});
+playerPaper.addEventListener('click', () => {
+    alert("paper");
+});
+playerRock.addEventListener('click', () => {
+    alert("rock");
+});
+
+
+
+
 
 function game() {
     for (let i = 0; i < 5; i++) {

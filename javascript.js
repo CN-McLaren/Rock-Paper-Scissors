@@ -47,32 +47,27 @@ playerScissors.addEventListener('click', () => {
     const computerSelection = getComputerChoice()
     const playerSelection = "scissors";
     playRound(playerSelection, computerSelection)
+    checkWinner(playerScore, compScore);
     });
 
 playerPaper.addEventListener('click', () => {
     const playerSelection = "paper";
     const computerSelection = getComputerChoice()
     playRound(playerSelection, computerSelection)
-    return playRound;
+    checkWinner(playerScore, compScore);
 });
 playerRock.addEventListener('click', () => {
     const playerSelection = "rock";
     const computerSelection = getComputerChoice()
     playRound(playerSelection, computerSelection)
-    return playRound;
+    checkWinner(playerScore, compScore);
 });
 
-
-function game() {
-    for (let i = 0; i < 5; i++) {
-    const playerSelection = prompt("Choose Rock, Paper or Scissors?").toLowerCase()
-    const computerSelection = getComputerChoice()
-    playRound(playerSelection, computerSelection)
-    }
-    if (playerScore > compScore) {
-        alert ("You beat the computer!"); }
-    else if (playerScore < compScore) {
-        alert ("You lost to the computer!"); }
+function checkWinner () {
+    if (compScore === 5)
+    alert ("Computer Wins!");
+    else if (playerScore === 5)
+    alert ("Player Wins!");
 }
 
 function getRandomNumber(min, max){
@@ -90,3 +85,4 @@ else if(computerChoice === 2) {
 else if (computerChoice === 3) {
     return("scissors"); }
 }
+

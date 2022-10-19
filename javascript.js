@@ -21,48 +21,66 @@ let compScore = 0
 let playerScore = 0
 
 function playRound(playerSelection, computerSelection) {
-    if (computerSelection === "rock" && playerSelection === "rock") {
-        alert("draw!") }
-    else if (computerSelection === "scissor" && playerSelection === "scissor") {
-        alert("draw!") }
-    else if (computerSelection === "paper" && playerSelection === "paper") {
-        alert("draw!") } 
+    if (playerSelection === computerSelection) {
+        const p = document.createElement('p')
+        p.innerText = `you tied! you both picked ${playerSelection}`
+        outcomeDiv.appendChild(p) }
     else if (computerSelection === "rock" && playerSelection === "paper") {
         playerScore++
-        alert("You Win! their rock was no match for your paper!") }   
+        const p = document.createElement('p')
+        p.innerText = "You Win! their rock was no match for your paper!"   
+        outcomeDiv.appendChild(p) }
     else if (computerSelection === "scissors" && playerSelection === "rock") {
         playerScore++    
-        alert("You Win! rock crushes scissors everytime!") }  
+        const p = document.createElement('p')
+        p.innerText = "You Win! rock crushes scissors everytime!" 
+        outcomeDiv.appendChild(p) }
     else if (computerSelection === "paper" && playerSelection === "scissors") {
         playerScore++
-        alert("You Win! their flimsly paper is no match for the mighty scissors!") }
+        const p = document.createElement('p')
+        p.innerText = "You Win! their flimsly paper is no match for the mighty scissors!" 
+        outcomeDiv.appendChild(p) }
         else if (computerSelection === "paper" && playerSelection === "Rock") {
         compScore++
-        alert("You Lose! lose by suffocation!") }
+        const p = document.createElement('p')
+        p.innerText = "You Lose! lose by suffocation!" 
+        outcomeDiv.appendChild(p) }
     else if (computerSelection === "rock" && playerSelection === "scissors") {
         compScore++
-        alert("You Lose! crushed by the boulder of sysiphus") }
+        const p = document.createElement('p')
+        p.innerText = "You Lose! crushed by the boulder of sysiphus" 
+        outcomeDiv.appendChild(p) }
     else if (computerSelection === "scissors" && playerSelection === "paper") {
         compScore++
-        alert("You Lose! what did you expect? you used paper...") }
+        const p = document.createElement('p')
+        p.innerText = "You Lose! what did you expect? you used paper..." 
+        outcomeDiv.appendChild(p) }
     }
 
+const outcomeDiv = document.querySelector('.outcome');
 const playerScissors = document.querySelector('.container').querySelector('.player').querySelector('.playerChoices').querySelector('.playerScissors');
 const playerPaper = document.querySelector('.container').querySelector('.player').querySelector('.playerChoices').querySelector('.playerPaper');
 const playerRock = document.querySelector('.container').querySelector('.player').querySelector('.playerChoices').querySelector('.playerRock');
 
 playerScissors.addEventListener('click', () => {
-    alert("scissors");
-});
+    const playerSelection = "scissors";
+    const computerSelection = getComputerChoice()
+    playRound(playerSelection, computerSelection)
+    console.log(computerSelection);
+    });
+
 playerPaper.addEventListener('click', () => {
-    alert("paper");
+    const playerSelection = "paper";
+    const computerSelection = getComputerChoice()
+    playRound(playerSelection, computerSelection)
+    return playRound;
 });
 playerRock.addEventListener('click', () => {
-    alert("rock");
+    const playerSelection = "rock";
+    const computerSelection = getComputerChoice()
+    playRound(playerSelection, computerSelection)
+    return playRound;
 });
-
-
-
 
 
 function game() {

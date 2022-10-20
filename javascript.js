@@ -1,5 +1,6 @@
 let compScore = 0
 let playerScore = 0
+let ties = 0
 
 const playerScissors = document.querySelector('.container').querySelector('.player').querySelector('.playerChoices').querySelector('.playerScissors');
 const playerPaper = document.querySelector('.container').querySelector('.player').querySelector('.playerChoices').querySelector('.playerPaper');
@@ -48,6 +49,7 @@ playerScissors.addEventListener('click', () => {
     const playerSelection = "scissors";
     playRound(playerSelection, computerSelection)
     checkWinner(playerScore, compScore);
+    winCount();
     });
 
 playerPaper.addEventListener('click', () => {
@@ -55,12 +57,14 @@ playerPaper.addEventListener('click', () => {
     const computerSelection = getComputerChoice()
     playRound(playerSelection, computerSelection)
     checkWinner(playerScore, compScore);
+    winCount();
 });
 playerRock.addEventListener('click', () => {
     const playerSelection = "rock";
     const computerSelection = getComputerChoice()
     playRound(playerSelection, computerSelection)
     checkWinner(playerScore, compScore);
+    winCount();
 });
 
 function checkWinner () {
@@ -68,6 +72,13 @@ function checkWinner () {
     alert ("Computer Wins!");
     else if (playerScore === 5)
     alert ("Player Wins!");
+}
+
+function winCount () {
+    const pWinCount = playerScore;
+    const cWinCount = compScore;
+    document.querySelector(".playerScore").textContent = `score: ${pWinCount}`;
+    document.querySelector(".computerScore").textContent = `score: ${cWinCount}`;
 }
 
 function getRandomNumber(min, max){

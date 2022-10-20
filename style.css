@@ -9,37 +9,37 @@ body {
 }
 
 h1 {
-    color: #DDCA7D;
+    color: #F2F4FF;
 }
 
 h2 {
-    color: #DDCA7D;
+    color: #F2F4FF;
 }
 
 p {
-    color: #DDCA7D;
+    color: #F2F4FF;
     font-size:30px;
 }
 .header {
     display:flex;
     justify-content: center;
-    background-color: #242331;
+    background-color: #96C5F7;
 }
 
 .footer {
     display:flex;
     justify-content: center;
-    background-color: #242331;
+    background-color: #96C5F7;
 }
 .container {
     display:flex;
     justify-content: space-around;
-    background-color: #A27035;
+    background-color: #96C5F7;
 }
 
 .scoreContainer {
     padding:100px;
-    background-color: #A27035;
+    background-color: #96C5F7;
     display:flex;
     justify-content: space-between;
 
@@ -80,11 +80,5 @@ p {
 
 .middleText {
     margin-bottom: 50px;
-    color: #DDCA7D;
-}
-
-.compText {
-    display: flex;
-    justify-content: center;
-    color: #DDCA7D;
+    color: #F2F4FF;
 }

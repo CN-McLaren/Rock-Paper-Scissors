@@ -96,4 +96,3 @@ else if(computerChoice === 2) {
 else if (computerChoice === 3) {
     return("scissors"); }
 }
-

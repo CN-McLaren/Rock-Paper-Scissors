@@ -18,7 +18,7 @@ function playRound(playerSelection, computerSelection) {
         p.innerText = "You Win! their rock was no match for your paper!"   
         outcomeDiv.appendChild(p) }
     else if (computerSelection === "scissors" && playerSelection === "rock") {
-        playerScore++    
+        playerScore++ 
         const p = document.createElement('p')
         p.innerText = "You Win! rock crushes scissors everytime!" 
         outcomeDiv.appendChild(p) }
@@ -66,6 +66,8 @@ playerRock.addEventListener('click', () => {
     checkWinner(playerScore, compScore);
     winCount();
 });
+
+
 
 function checkWinner () {
     if (compScore === 5)

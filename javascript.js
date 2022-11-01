@@ -110,3 +110,7 @@ else if (computerChoice === 3) {
     let remove = document.querySelector('.scoreContainer').querySelector('.outcome').querySelector('p');
     remove.parentNode.removeChild(remove);
 }
+
+function computerChoices() {
+    alert("No touch!")
+}

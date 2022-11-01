@@ -9,36 +9,43 @@ const playerRock = document.querySelector('.container').querySelector('.player')
 function playRound(playerSelection, computerSelection) {
     const outcomeDiv = document.querySelector('.outcome');
     if (playerSelection === computerSelection) {
+        clearRound();
         const p = document.createElement('p')
         p.innerText = `you tied! you both picked ${playerSelection}`
         outcomeDiv.appendChild(p) }
     else if (computerSelection === "rock" && playerSelection === "paper") {
         playerScore++
+        clearRound();
         const p = document.createElement('p')
         p.innerText = "You Win! their rock was no match for your paper!"   
         outcomeDiv.appendChild(p) }
     else if (computerSelection === "scissors" && playerSelection === "rock") {
         playerScore++ 
+        clearRound();
         const p = document.createElement('p')
         p.innerText = "You Win! rock crushes scissors everytime!" 
         outcomeDiv.appendChild(p) }
     else if (computerSelection === "paper" && playerSelection === "scissors") {
         playerScore++
+        clearRound();
         const p = document.createElement('p')
         p.innerText = "You Win! their flimsly paper is no match for the mighty scissors!" 
         outcomeDiv.appendChild(p) }
         else if (computerSelection === "paper" && playerSelection === "Rock") {
         compScore++
+        clearRound();
         const p = document.createElement('p')
         p.innerText = "You Lose! lose by suffocation!" 
         outcomeDiv.appendChild(p) }
     else if (computerSelection === "rock" && playerSelection === "scissors") {
         compScore++
+        clearRound();
         const p = document.createElement('p')
         p.innerText = "You Lose! crushed by the boulder of sysiphus" 
         outcomeDiv.appendChild(p) }
     else if (computerSelection === "scissors" && playerSelection === "paper") {
         compScore++
+        clearRound();
         const p = document.createElement('p')
         p.innerText = "You Lose! what did you expect? you used paper..." 
         outcomeDiv.appendChild(p) }
@@ -97,4 +104,9 @@ else if(computerChoice === 2) {
     return("paper"); }
 else if (computerChoice === 3) {
     return("scissors"); }
+}
+
+ function clearRound() {
+    let remove = document.querySelector('.scoreContainer').querySelector('.outcome').querySelector('p');
+    remove.parentNode.removeChild(remove);
 }

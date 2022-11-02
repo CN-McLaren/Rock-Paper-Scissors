@@ -41,7 +41,7 @@ function playRound(playerSelection, computerSelection) {
         compScore++
         clearRound();
         const p = document.createElement('p')
-        p.innerText = "You Lose! crushed by the boulder of sysiphus" 
+        p.innerText = "You Lose! crushed by the boulder of sisyphus" 
         outcomeDiv.appendChild(p) }
     else if (computerSelection === "scissors" && playerSelection === "paper") {
         compScore++

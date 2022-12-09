@@ -49,6 +49,10 @@ p {
 
 }
 
+.compChoices {
+    opacity:0.8;
+}
+
 .playerScore {
     display:flex;
     flex-direction: column;

@@ -5,8 +5,14 @@ body {
     flex-direction: column;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin:0px;
-    padding:0px;
+    padding:5px;
     background-color: #96C5F7;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #ccc;
+    border-radius: 5px;
 }
 
 h1 {
@@ -41,6 +47,7 @@ p {
     background-color: #96C5F7;
 }
 
+
 .scoreContainer {
     padding:40px;
     background-color: #96C5F7;
@@ -51,6 +58,11 @@ p {
 
 .compChoices {
     opacity:0.8;
+    display:flex;
+}
+
+.playerChoices {
+    display:flex;
 }
 
 .playerScore {
@@ -67,6 +79,7 @@ p {
     align-items: center;
     color: #F2F4FF;
     font-size:30px;
+    text-align: right;
 }
 
 .player {

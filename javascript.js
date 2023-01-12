@@ -1,6 +1,6 @@
-let compScore = 0
-let playerScore = 0
-let ties = 0
+let compScore = 0;
+let playerScore = 0;
+let ties = 0;
 
 const playerScissors = document.querySelector('.container').querySelector('.player').querySelector('.playerChoices').querySelector('.playerScissors');
 const playerPaper = document.querySelector('.container').querySelector('.player').querySelector('.playerChoices').querySelector('.playerPaper');
@@ -73,8 +73,6 @@ playerRock.addEventListener('click', () => {
     checkWinner(playerScore, compScore);
     winCount();
 });
-
-
 
 function checkWinner () {
     if (compScore === 5)

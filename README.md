@@ -23,7 +23,7 @@ This project is a simple implementation of the classic Rock-Paper-Scissors game.
 
 ![Art Screenshot](images/rps-Icon.png)
 
-Art images were created to fit a theme for the project
+Art images were designed & created to fit a theme for the project.
 
 ## Technologies Used
 
@@ -36,4 +36,4 @@ Art images were created to fit a theme for the project
 - `index.html`: Main HTML file containing the structure of the game.
 - `javascript.js`: JavaScript file handling game logic.
 - `style.css`: CSS file for styling the game interface.
-- - `images`: Contains images png for project.
+- `images`: Contains images png for project.
